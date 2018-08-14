@@ -12,8 +12,16 @@ module.exports = {
         presets: ['react'],
         plugins: ['syntax-dynamic-import']
       }
-    }]
-  },
+    },
+    {
+      test: /\.css$/,
+      use: [
+        { loader: "style-loader" },
+        { loader: "css-loader" }
+      ]
+    }
+  ]
+},
   output: {
     filename: 'bundle-[name].js',
     path: path.resolve(__dirname, 'public', 'scripts'),
