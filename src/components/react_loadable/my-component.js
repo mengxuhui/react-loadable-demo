@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default class MyComponent extends React.Component {
 
     constructor(props) {
@@ -5,8 +7,9 @@ export default class MyComponent extends React.Component {
     }
 
     render() {
+
       return (
-          <h1>This is my-component ...</h1>
+          <h1>loaded ...</h1>
       );
     }
   }

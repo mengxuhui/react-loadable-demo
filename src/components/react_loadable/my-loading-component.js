@@ -1,37 +1,17 @@
-export default class Loading extends React.Component {
+import React from 'react';
 
-    constructor(props) {
-        super(props);
+const Loading = ({ isLoading, error }) => {
+    // Handle the loading state
+    if (isLoading) {
+        return <div>Loading...</div>;
     }
-
-    render() {
-        
-      // normal
-      
-      /* return (
-            <div>Loading ...</div>
-      ); */
-
-
-      // error 
-      if (props.error) {
-
-          return <div>Error! <button onClick={ props.retry }>Retry</button></div>;
-
-      // timeout
-      } else if (props.timedOut) {
-
-          return <div>Taking a long time... <button onClick={ props.retry }>Retry</button></div>;
-      // pastDelay
-      } else if (props.pastDelay) {
-
-          return <div>Loading...</div>;
-          
-      } else {
-          return null;
-      }
+    // Handle the error state
+    else if (error) {
+        return <div>Sorry, there was a problem loading the page.</div>;
     }
-  }
+    else {
+        return null;
+    }
+};
 
-
-  
+export default Loading
