@@ -4,10 +4,10 @@ import Loading from './my-loading-component';
 import fakeDelay from '../fakeDelay';
 
 const LoadableComponent = Loadable({
-  loader: () => fakeDelay(1000).then(() => import('./my-component')),
-  /* loader: () => import('./my-component'), */
+  loader: () => fakeDelay(600).then(() => import('./my-component')),
+  // loader: () => import('./my-component'),
   LoadingComponent: Loading,
-  delay: 1000, // 0.3 seconds
+  delay: 500, // 0.3 seconds
 });
 
 export default class App extends React.Component {
