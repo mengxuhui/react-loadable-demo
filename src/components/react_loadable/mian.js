@@ -1,7 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import Loading from './my-loading-component';
-import fakeDelay from '../fakeDelay';
+import fakeDelay from './fakeDelay';
 
 const LoadableComponent = Loadable({
   loader: () => fakeDelay(600).then(() => import('./my-component')),
