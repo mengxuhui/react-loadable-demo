@@ -1,22 +1,9 @@
 import React from 'react';
 
 const Loading = (props) => {
-    // Handle the loading state
-    if (props.isLoading) {
-        return(
-            <ul className="theme-lst loading">
-                <li key={Math.random()}>
-                    <a href="javascript:;" className="theme-lst-tab">
-                        <div className="theme-lst-thumb"></div>
-                        <div className="theme-lst-tit"></div>
-                        <div className="theme-lst-txt"></div>
-                    </a>
-                </li>
-            </ul>
-        );
-    }
+   
     // pastDelay
-    else if(props.pastDelay) {
+    if(props.pastDelay) {
         return(
             <ul className="theme-lst loading">
                 <li key={Math.random()}>
