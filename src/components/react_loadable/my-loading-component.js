@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Loading = (props) => {
-   
+
     // pastDelay
-    if(props.pastDelay) {
-        return(
+    if (props.pastDelay) {
+        return (
             <ul className="theme-lst loading">
                 <li key={Math.random()}>
                     <a href="javascript:;" className="theme-lst-tab">
@@ -19,7 +19,7 @@ const Loading = (props) => {
     // Handle the error state
     else if (props.error) {
         return (
-            <div className="container-fluid" style={{marginTop: '20px'}}>
+            <div className="container-fluid" style={{ marginTop: '20px' }}>
                 <div className="row-fluid">
                     <div className="span12">
                         <div className="alert alert-error">
