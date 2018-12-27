@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Loadable from 'react-loadable';
 // react-router
-/* 
+
 import Loading from './components/react_loadable/my-loading-component';
 import hashHistory from 'react-router';
-import {HashRouter, Route} from 'react-router-dom' */
+import { HashRouter, Route } from 'react-router-dom'
 
 
 // require.ensure
@@ -18,25 +18,32 @@ import {HashRouter, Route} from 'react-router-dom' */
 /* const List = Loadable({
     loader: () => import('./components/require_ensure/list'),
     LoadingComponent: Loading
-  });
-  
-  const List2 = Loadable({
+});
+
+const List2 = Loadable({
     loader: () => import('./components/require_ensure/list2'),
     LoadingComponent: Loading
-  });
-  
+}); */
+
 let App = () => {
     return <HashRouter history={hashHistory}>
-        <div id="routerContainer">
-            <Route path="/" component={List}/>
-            <Route path="/list2" component={List2}/>
-        </div>
+        <React.Suspense fallback={<div>Loading...</div>}>
+            <div id="routerContainer">
+                <Route path="/" component={List3} />
+                <Route path="/list2" component={List4} />
+            </div>
+        </React.Suspense>
     </HashRouter>
-}; */
+};
+
+// 基于React.lazy()实现代码分割
+const List3 = React.lazy(() => import('./components/require_ensure/list'));
+
+const List4 = React.lazy(() => import('./components/require_ensure/list2'));
 
 
 // react-loadable
-import App from './components/react_loadable/mian';
+//import App from './components/react_loadable/mian';
 
 
-ReactDOM.render(<App/>,document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
