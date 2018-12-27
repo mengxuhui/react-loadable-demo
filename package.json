@@ -2,7 +2,7 @@
   "name": "react-loadable-example",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "James Kyle <me@thejameskyle.com>",
+  "author": "mayo",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server"

@@ -1,4 +1,4 @@
-# React Loadable demo
+# React Loadable + React.lazy
 
 ```js
 git clone https://github.com/mengxuhui/react-loadable-demo.git
@@ -7,4 +7,4 @@ npm install
 npm start
 ```
 
-Then open up [localhost:9000](http://localhost:8888) in your browser.
+Then open up [localhost:3000](http://localhost:3000) in your browser.
